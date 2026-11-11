@@ -1,0 +1,155 @@
+/* --- Variabel Warna --- */
+:root {
+  --utama: #0b7a75;
+  --gelap: #064e4a;
+  --muda: #e6f4f1;
+  --aksen: #f4a300;
+}
+
+/* --- Gaya Umum --- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, var(--muda), #ffffff);
+  color: #2b2b2b;
+}
+
+/* --- Header --- */
+header {
+  background: linear-gradient(135deg, var(--utama), var(--gelap));
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header .logo {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  margin: 0 auto 10px;
+  font-size: 36px;
+  background: #fff;
+  border-radius: 50%;
+  border: 3px solid var(--aksen);
+}
+
+header h1 { margin: 0; font-size: 34px; letter-spacing: 1px; }
+header p  { margin: 6px 0 0; font-style: italic; }
+
+/* --- Navigasi --- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: var(--aksen);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #3b2a00;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #fff;
+  color: var(--gelap);
+}
+
+/* --- Konten Utama --- */
+main {
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+section, article, address {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+  color: var(--utama);
+  border-bottom: 3px solid var(--aksen);
+  padding-bottom: 6px;
+  margin-top: 0;
+}
+
+/* --- Kartu Destinasi (Grid) --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  text-align: center;
+  background: var(--muda);
+  padding: 18px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.card .icon { font-size: 44px; }
+.card h3    { color: var(--gelap); margin: 8px 0; }
+
+.harga {
+  display: inline-block;
+  background: var(--utama);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* --- Event --- */
+article {
+  border-left: 6px solid var(--utama);
+}
+
+time {
+  font-weight: bold;
+  color: var(--utama);
+}
+
+/* --- Alamat --- */
+address {
+  font-style: normal;
+  border-left: 6px solid var(--aksen);
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  background: var(--gelap);
+  color: #d9f0ec;
+  padding: 18px 0;
+  font-size: 14px;
+}
+
+footer a { color: var(--aksen); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* --- Responsif (layar kecil) --- */
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr; }
+  nav   { flex-wrap: wrap; gap: 10px; }
+  header h1 { font-size: 26px; }
+}
